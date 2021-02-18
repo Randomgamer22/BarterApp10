@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+itemimport React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { Card, Header, Icon } from 'react-native-elements';
 import firebase from 'firebase';
@@ -52,7 +52,7 @@ export default class ReceiverDetailsScreen extends Component {
 
   updateItemStatus = () => {
     db.collection('all_donations').add({
-      itemName: this.state.bookName,
+      itemName: this.state.itemName,
       requestId: this.state.requestId,
       requestedBy: this.state.recieverName,
       donorId: this.state.userId,
@@ -96,7 +96,7 @@ export default class ReceiverDetailsScreen extends Component {
           <Card title={'Receiver Information'} titleStyle={{ fontSize: 20 }}>
             <Card>
               <Text style={{ fontWeight: 'bold' }}>
-                Name : {this.state.bookName}
+                Name : {this.state.itemName}
               </Text>
             </Card>
             <Card>
